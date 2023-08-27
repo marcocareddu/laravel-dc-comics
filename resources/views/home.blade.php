@@ -9,8 +9,10 @@
             <div class="row">
 
                 {{-- Dynamic image HERE --}}
+
+                {{-- !! TODO USE FOREACH INSTEAD FOR --}}
                 @for ($i = 0; $i < 10; $i++)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card col-6 m-3" style="width: 18rem;">
                         <img src="..." class="card-img-top" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
