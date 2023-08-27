@@ -6,19 +6,22 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
-    // Comic list
+
+    // Comics list
     public function index()
     {
-        return view('comics.list');
+        $comics = config('comics');
+        return view('comics.list', compact('comics'));
     }
 
     // Comic details
-    public function show()
+    public function show($index)
     {
-        return view('comics.show');
+        $comic = config('comics')[$index];
+        return view('comics.detail', compact('comic'));
     }
 
-    // Comic list
+    // Create Comic
     public function create()
     {
         return view('comics.create');
