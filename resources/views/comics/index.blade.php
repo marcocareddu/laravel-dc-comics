@@ -14,7 +14,7 @@
                         <img src="{{ $comic->thumb }}" class="card-img-top" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->title }}</h5>
-                            <a href="{{ url("comic/$index") }}" class="btn btn-primary">Details</a>
+                            <a href="{{ url("comics/$index") }}" class="btn btn-primary">Details</a>
                         </div>
                     </div>
                 @endforeach

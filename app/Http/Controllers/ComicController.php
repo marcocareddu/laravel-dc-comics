@@ -12,14 +12,14 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('comics.list', compact('comics'));
+        return view('comics.index', compact('comics'));
     }
 
     // Comic details
-    public function show($index)
+    public function show($comic)
     {
-        $comic = config('comics')[$index];
-        return view('comics.detail', compact('comic'));
+        $comic = Comic::findOrFail($comic);
+        return view('comics.show', compact('comic'));
     }
 
     // Create Comic

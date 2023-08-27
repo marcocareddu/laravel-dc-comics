@@ -24,10 +24,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->group(function () {
 
     // List route
-    Route::get('/list', 'index')->name('index');
+    Route::get('/index', 'index')->name('index');
 
     // Details route
-    Route::get('/detail/{index}', 'show')->name('detail');
+    Route::get('/{comic}', 'show')->name('show');
 
     // Create route
     Route::get('/create', 'create')->name('create');
