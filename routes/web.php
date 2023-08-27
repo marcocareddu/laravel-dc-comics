@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ComicController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +18,13 @@ use Illuminate\Support\Facades\Route;
 // Home route
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Comic route
-Route::get('/comic', [ComicController::class, 'index'])->name('comics');
+
+// ######### PRODUCT ROUTE #########
+// List route
+Route::get('/comics.list', [ProductController::class, 'index'])->name('comics.list');
+
+// Details route
+Route::get('/comics.show', [ProductController::class, 'show'])->name('comics.details');
+
+// Create route
+Route::get('/comics.create', [ProductController::class, 'create'])->name('comics.create');

@@ -6,10 +6,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-flex w-100 justify-content-between">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('comics') }}">Comics</a>
+                            <a class="nav-link active" href="{{ route('comics.list') }}">Comics</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success" href="#">+</a>
+                            <a class="btn btn-success" href="{{ route('comics.create') }}">+</a>
                         </li>
                     </ul>
                 </div>
