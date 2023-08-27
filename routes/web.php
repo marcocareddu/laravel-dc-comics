@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +20,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-// ######### PRODUCT ROUTE #########
-// List route
-Route::get('/comics.list', [ProductController::class, 'index'])->name('comics.list');
+// ######### PRODUCTS ROUTE #########
 
-// Details route
-Route::get('/comics.show', [ProductController::class, 'show'])->name('comics.details');
+Route::controller(ProductController::class)->prefix('/comics')->name('comics.')->group(function () {
 
-// Create route
-Route::get('/comics.create', [ProductController::class, 'create'])->name('comics.create');
+    // List route
+    Route::get('/list', 'index')->name('index');
+
+    // Details route
+    Route::get('/detail', 'show')->name('show');
+
+    // Create route
+    Route::get('/create', 'create')->name('create');
+});

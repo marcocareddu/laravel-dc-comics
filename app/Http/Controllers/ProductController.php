@@ -15,7 +15,7 @@ class ProductController extends Controller
     // Product details
     public function show()
     {
-        return view('comics.details');
+        return view('comics.show');
     }
 
     // Product list
