@@ -14,13 +14,13 @@
 <body>
 
     {{-- Header --}}
-    @include('header')
+    @include('includes.header')
 
     {{-- Main --}}
     @yield('main')
 
     {{-- Footer --}}
-    @include('footer')
+    @include('includes.footer')
 
 </body>
 
