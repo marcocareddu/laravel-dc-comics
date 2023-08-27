@@ -11,9 +11,9 @@
                 {{-- Dynamic image HERE --}}
                 @foreach ($comics as $index => $comic)
                     <div class="card col-6 m-3" style="width: 18rem;">
-                        <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="Image">
+                        <img src="{{ $comic->thumb }}" class="card-img-top" alt="Image">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $comic['title'] }}</h5>
+                            <h5 class="card-title">{{ $comic->title }}</h5>
                             <a href="{{ url("comic/$index") }}" class="btn btn-primary">Details</a>
                         </div>
                     </div>
