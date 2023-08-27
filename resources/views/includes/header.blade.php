@@ -4,9 +4,12 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Home</a>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav d-flex w-100 justify-content-between">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Comics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-success" href="#">+</a>
                         </li>
                     </ul>
                 </div>
