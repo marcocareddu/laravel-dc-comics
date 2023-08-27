@@ -4,21 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ComicController extends Controller
 {
-    // Product list
+    // Comic list
     public function index()
     {
         return view('comics.list');
     }
 
-    // Product details
+    // Comic details
     public function show()
     {
         return view('comics.show');
     }
 
-    // Product list
+    // Comic list
     public function create()
     {
         return view('comics.create');

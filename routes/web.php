@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Routing\RouteGroup;
@@ -20,9 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-// ######### PRODUCTS ROUTE #########
-
-Route::controller(ProductController::class)->prefix('/comics')->name('comics.')->group(function () {
+// ######### COMICS ROUTE #########
+Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->group(function () {
 
     // List route
     Route::get('/list', 'index')->name('index');
