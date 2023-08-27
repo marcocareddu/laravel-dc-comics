@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ComicController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +27,7 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     Route::get('/list', 'index')->name('index');
 
     // Details route
-    Route::get('/detail', 'show')->name('show');
+    Route::get('/detail/{index}', 'show')->name('detail');
 
     // Create route
     Route::get('/create', 'create')->name('create');
