@@ -6,7 +6,7 @@
 
     <main>
         <div class="container text-center">
-            <form method="POST">
+            <form method="POST" action="{{ route('comics.update', $comic) }}">
                 @csrf
                 @method('PUT')
 
@@ -72,6 +72,7 @@
                         <textarea type="text" id="writers" name="writers" class="form-control">{{ $comic->writers }}</textarea>
                     </div>
                 </div>
+                <button class="btn btn-primary">Save</button>
             </form>
 
         </div>
