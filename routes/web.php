@@ -26,9 +26,9 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     // List route
     Route::get('/index', 'index')->name('index');
 
-    // Details route
-    Route::get('/{comic}', 'show')->name('show');
-
     // Create route
     Route::get('/create', 'create')->name('create');
+
+    // Details route
+    Route::get('/{comic}', 'show')->name('show');
 });
