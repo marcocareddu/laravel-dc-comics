@@ -23,15 +23,21 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // ######### COMICS ROUTE #########
 Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->group(function () {
 
-    // List route
+    // List Route
     Route::get('/index', 'index')->name('index');
 
-    // Create route
+    // Create Route
     Route::get('/create', 'create')->name('create');
 
-    // Details route
+    // Details Route
     Route::get('/{comic}', 'show')->name('show');
 
-    // Store route
+    // Update Route
+    Route::get('/{comic}/edit', 'edit')->name('edit');
+
+    // Store Route
     Route::post('/comics', 'store')->name('store');
+
+    // Redirect Route 
+    Route::put('/{comic}', 'update')->name('update');
 });
