@@ -6,8 +6,13 @@
 
     <main>
         <div class="container text-center">
-            <form action="">
+
+            <form method="POST" action="{{ route('comics.store') }}">
+
+                @csrf
+
                 <div class="row justify-content-center">
+                    <h1 class="mb-3">ADD COMIC</h1>
 
                     {{-- Title --}}
                     <div class="mb-3 col-6">
@@ -36,7 +41,7 @@
                     {{-- Sale Date --}}
                     <div class="mb-3 col-6">
                         <label class="form-label" for="sale_date">Sale Date</label>
-                        <input type="text" id="sale_date" name="sale_date" class="form-control">
+                        <input type="date" id="sale_date" name="sale_date" class="form-control">
                     </div>
 
                     {{-- Type --}}
@@ -63,7 +68,9 @@
                         <textarea type="text" id="writers" name="writers" class="form-control"></textarea>
                     </div>
                 </div>
+                <button class="btn btn-success">Add</button>
             </form>
+
         </div>
     </main>
 
