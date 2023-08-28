@@ -9,6 +9,7 @@
 
             <form method="POST" action="{{ route('comics.store') }}">
 
+                {{-- Token --}}
                 @csrf
 
                 <div class="row justify-content-center">
