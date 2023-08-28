@@ -31,4 +31,7 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
 
     // Details route
     Route::get('/{comic}', 'show')->name('show');
+
+    // Store route
+    Route::post('/comics', 'store')->name('store');
 });
