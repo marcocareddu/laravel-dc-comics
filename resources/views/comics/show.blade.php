@@ -55,6 +55,7 @@
                             </table>
                         </div>
                     </div>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-danger">Modify</a>
                 </div>
             </div>
         </div>
