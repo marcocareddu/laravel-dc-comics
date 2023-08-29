@@ -35,6 +35,9 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     // Update Route
     Route::get('/{comic}/edit', 'edit')->name('edit');
 
+    // Trash Route 
+    Route::get('/trash', 'trash')->name('trash');
+
     // Store Route
     Route::post('/comics', 'store')->name('store');
 
