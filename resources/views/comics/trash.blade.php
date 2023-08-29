@@ -27,22 +27,24 @@
                                 </form>
 
                                 {{-- Restore Button --}}
-                                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                <form action="{{ route('comics.restore', $comic) }}" method="POST">
                                     @csrf
-                                    @method('DELETE')
+                                    @method('PATCH ')
                                     <button class="btn btn-success">Restore</button>
                                 </form>
 
                             </div>
                         </div>
                     </div>
+
                 @empty
                     <div class="alert alert-success">There's no elements</div>
                 @endforelse
+
                 <div class="d-flex justify-content-center">
 
                     {{-- All Comics Button --}}
-                    <a href="{{ route('comics.index', $comic) }}" class="btn btn-primary">Return to Comics</a>
+                    <a href="{{ route('comics.index') }}" class="btn btn-primary">Return to Comics</a>
 
                 </div>
             </div>

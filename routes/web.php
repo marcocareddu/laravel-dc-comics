@@ -49,4 +49,7 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
 
     // Delete All Route 
     Route::delete('/{comic}/destroy', 'destroy')->name('destroy');
+
+    // Restore Comic Route 
+    Route::patch('/{comic}/restore', 'restore')->name('restore');
 });
