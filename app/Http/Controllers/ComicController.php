@@ -32,11 +32,11 @@ class ComicController extends Controller
     {
         // !VALIDATION
         $request->validate([
-            'title' => 'string',
+            'title' => 'required|string',
             'thumb' => 'url:http,https',
-            'price' => 'string',
+            'price' => 'required|string',
             'series' => '',
-            'sale_date' => 'date',
+            'sale_date' => 'required|date',
             'type' => 'string',
             'description' => '',
             'artists' => '',
@@ -60,32 +60,19 @@ class ComicController extends Controller
     // Update Comic
     public function update(Request $request, Comic $comic)
     {
-        // !VALIDATION
 
         // !VALIDATION
         $request->validate([
-            'title' => 'string',
+            'title' => 'required|string',
             'thumb' => 'url:http,https',
-            'price' => 'string',
+            'price' => 'required|string',
             'series' => '',
-            'sale_date' => 'date',
+            'sale_date' => 'required|date',
             'type' => 'string',
             'description' => '',
             'artists' => '',
             'writers' => ''
         ]);
-
-        // $request->validate([
-        //     'title' => 'required|string',
-        //     'thumb' => 'url:http,https',
-        //     'price' => 'required|string',
-        //     'series' => '',
-        //     'sale_date' => 'required|date',
-        //     'type' => 'string',
-        //     'description' => '',
-        //     'artists' => '',
-        //     'writers' => ''
-        // ]);
 
         $data = $request->all();
         $comic->update($data);

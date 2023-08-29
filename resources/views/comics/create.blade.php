@@ -8,7 +8,7 @@
 
         {{-- Errore Alert --}}
         {{-- !! RESUME FROM COMMENTS --}}
-        {{-- @include('includes.error') --}}
+        @include('includes.error')
 
         <div class="container text-center">
 
