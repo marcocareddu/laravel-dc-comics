@@ -14,7 +14,20 @@
                         <img src="{{ $comic->thumb }}" class="card-img-top" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->title }}</h5>
-                            <a href="{{ url("comics/$index") }}" class="btn btn-primary">Details</a>
+
+                            {{-- Buttons --}}
+                            <div class="d-flex justify-content-between">
+
+                                {{-- Detail Button --}}
+                                <a href="{{ url("comics/$index") }}" class="btn btn-primary">Details</a>
+
+                                {{-- Delete Button --}}
+                                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 @endforeach

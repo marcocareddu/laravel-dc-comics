@@ -40,4 +40,10 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
 
     // Redirect Route 
     Route::put('/{comic}', 'update')->name('update');
+
+    // Single Delete Route 
+    Route::delete('/', 'destroy')->name('destroy');
+
+    // Delete All Route 
+    Route::delete('/{comic}', 'destroy')->name('destroy');
 });
