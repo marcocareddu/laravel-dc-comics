@@ -89,7 +89,7 @@ class ComicController extends Controller
     // Trash Comic
     public function trash()
     {
-        $comics = [];
+        $comics = Comic::onlyTrashed()->get();
         return view('comics.trash', compact('comics'));
     }
 }
