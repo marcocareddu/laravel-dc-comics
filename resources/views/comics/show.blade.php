@@ -61,7 +61,7 @@
                         <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary">Modify</a>
 
                         {{-- Delete Button --}}
-                        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                        <form action="{{ route('comics.destroy', $comic) }}" method="POST" id="delete">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger">Delete</button>
@@ -72,4 +72,16 @@
         </div>
     </main>
 
+@endsection
+
+{{-- Javascript --}}
+@section('scripts')
+    <script>
+        const deleteForm = document.getElementById('delete');
+        deleteForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const confirmation = confirm('Are you sure you want to delete this comic?');
+            if (confirmation) deleteForm.submit();
+        });
+    </script>
 @endsection
