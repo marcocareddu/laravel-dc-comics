@@ -55,7 +55,18 @@
                             </table>
                         </div>
                     </div>
-                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-danger">Modify</a>
+                    <div class="d-flex justify-content-evenly">
+
+                        {{-- Modify Button --}}
+                        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary">Modify</a>
+
+                        {{-- Delete Button --}}
+                        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

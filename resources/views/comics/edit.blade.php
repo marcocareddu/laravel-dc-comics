@@ -77,7 +77,15 @@
                         <textarea type="text" id="writers" name="writers" class="form-control">{{ $comic->writers }}</textarea>
                     </div>
                 </div>
+
+                {{-- Save Button --}}
                 <button class="btn btn-primary">Save</button>
+            </form>
+            {{-- Delete Button --}}
+            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">Delete</button>
             </form>
 
         </div>
