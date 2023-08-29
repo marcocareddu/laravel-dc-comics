@@ -39,7 +39,7 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     Route::post('/comics', 'store')->name('store');
 
     // Put Route 
-    Route::put('/{comic}', 'update')->name('update');
+    Route::put('/{comic}/update', 'update')->name('update');
 
     // Delete Single Route 
     Route::delete('/destroy', 'destroy')->name('destroy');
