@@ -81,8 +81,9 @@
                 {{-- Save Button --}}
                 <button class="btn btn-primary">Save</button>
             </form>
+
             {{-- Delete Button --}}
-            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+            <form action="{{ route('comics.destroy', $comic) }}" method="POST" class="form-delete">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger">Delete</button>
@@ -91,4 +92,9 @@
         </div>
     </main>
 
+@endsection
+
+{{-- Javascript --}}
+@section('scripts')
+    @vite('resources/js/prevent-delete.js')
 @endsection

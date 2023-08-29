@@ -22,7 +22,7 @@
                                 <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary">Details</a>
 
                                 {{-- Delete Button --}}
-                                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                <form action="{{ route('comics.destroy', $comic) }}" method="POST" class="form-delete">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger">Delete</button>
@@ -35,4 +35,9 @@
             </div>
         </div>
     </main>
+@endsection
+
+{{-- Javascript --}}
+@section('scripts')
+    @vite('resources/js/prevent-delete.js')
 @endsection
