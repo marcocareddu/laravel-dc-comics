@@ -38,12 +38,12 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     // Store Route
     Route::post('/comics', 'store')->name('store');
 
-    // Redirect Route 
+    // Put Route 
     Route::put('/{comic}', 'update')->name('update');
 
-    // Single Delete Route 
-    Route::delete('/', 'destroy')->name('destroy');
+    // Delete Single Route 
+    Route::delete('/destroy', 'destroy')->name('destroy');
 
     // Delete All Route 
-    Route::delete('/{comic}', 'destroy')->name('destroy');
+    Route::delete('/{comic}/destroy', 'destroy')->name('destroy');
 });
