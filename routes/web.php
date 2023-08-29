@@ -29,14 +29,14 @@ Route::controller(ComicController::class)->prefix('/comics')->name('comics.')->g
     // Create Route
     Route::get('/create', 'create')->name('create');
 
+    // Trash Route 
+    Route::get('/trash', 'trash')->name('trash');
+
     // Details Route
     Route::get('/{comic}', 'show')->name('show');
 
     // Update Route
     Route::get('/{comic}/edit', 'edit')->name('edit');
-
-    // Trash Route 
-    Route::get('/trash', 'trash')->name('trash');
 
     // Store Route
     Route::post('/comics', 'store')->name('store');

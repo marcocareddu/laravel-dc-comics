@@ -85,4 +85,11 @@ class ComicController extends Controller
         $comic->delete();
         return to_route('comics.index');
     }
+
+    // Trash Comic
+    public function trash()
+    {
+        $comics = [];
+        return view('comics.trash', compact('comics'));
+    }
 }

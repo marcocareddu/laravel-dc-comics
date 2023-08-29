@@ -9,6 +9,7 @@
                             <a class="nav-link active" href="{{ route('comics.index') }}">Comics</a>
                         </li>
                         <li class="nav-item">
+                            <a class="btn btn-danger" href="{{ route('comics.trash') }}">Cestino</a>
                             <a class="btn btn-success" href="{{ route('comics.create') }}">+</a>
                         </li>
                     </ul>
