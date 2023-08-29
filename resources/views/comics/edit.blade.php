@@ -7,7 +7,8 @@
     <main>
 
         {{-- Errore Alert --}}
-        @include('includes.error')
+        {{-- !! RESUME FROM COMMENTS --}}
+        {{-- @include('includes.error') --}}
 
         <div class="container text-center">
             <form method="POST" action="{{ route('comics.update', $comic) }}">
